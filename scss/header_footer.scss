@@ -1,0 +1,299 @@
+@import 'variables';
+@import 'templates';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container_header {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.container_footer {
+    max-width: 1600px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.header {
+    padding-top: 50px;
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 130px 1fr;
+    grid-template-areas:
+    "header__logo header__logo header__nav"
+    "header__logo header__logo header__nav__menu__box";
+
+    &__logo {
+        grid-area: header__logo;
+        display: flex;
+    }
+
+    &__logo__svg {
+        margin: 0 4px;
+        height: 47px;
+        width: 21px;
+    }
+
+    &__logo__text {
+        text-decoration: none;
+        font-size: 36px;
+        line-height: 44px;
+        color: $color_dark_1;
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    &__nav {
+        align-items: center;
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 16px;
+        grid-area: header__nav;
+    }
+
+    &__nav__items {
+        display: flex;
+    }
+
+    &__nav__link {
+        text-decoration: none;
+        font-size: 12px;
+        padding: 5px 7px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 1px;
+        color: $color_white;
+
+        &:hover {
+            background-color: #FFFFFF33;
+            border-radius: 8px;  
+        }
+    }
+
+    &__nav__link_active {
+        background-color: $color_crimson;
+        border-radius: 8px;
+
+        &:hover {
+            background-color: $color_crimson;
+        }
+    }
+
+    &__nav__text {
+        @extend %link;
+        margin: 0 18px;
+        position: relative;
+        color: $color_white;
+
+        &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            display: block;
+            position: absolute;
+            background-color: $color_beige_3;
+            border-radius: 50%;
+            top: 7.5px;
+            right: -11px;
+        }
+
+        &::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            display: block;
+            position: absolute;
+            background-color: $color_beige_3;
+            border-radius: 50%;
+            top: 7.5px;
+            left: -13px;
+        }
+    }
+
+    &__nav__number {
+        @extend %font_2;
+        text-decoration: none;
+        color: $color_white;
+        position: relative;
+        margin-right: 18px;
+
+        &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            display: block;
+            position: absolute;
+            background-color: $color_beige_3;
+            border-radius: 50%;
+            top: 7.5px;
+            right: -11px;
+        }
+    }
+
+    &__nav__facebook:hover .header__nav__facebook_fill {
+        fill: $color_crimson;
+        transition: 0.3s;
+    }
+
+    &__nav__menu__box {
+        grid-area: header__nav__menu__box;
+    }
+
+    &__nav__menu__button {
+        display: none;
+    }
+
+    &__nav__menu__items {
+        justify-content: flex-end;
+        display: flex;
+        grid-area: header__nav__menu__items;
+    }
+
+    &__nav__menu__item {
+        margin-left: 15px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    &__nav__menu__link {
+        @extend  %font_2;
+        color: $color_white;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+    }
+
+    &__nav__menu__link_active {
+        text-decoration: underline;
+        color: $color_crimson;
+        text-underline-offset: 3px;
+    }
+}
+
+
+.footer {
+    background-color: $color_beige_1;
+
+    &__box {
+        border-top: 2px solid $color_beige_3;
+        padding: 30px 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "footer__location footer__copy"
+        "footer__contact footer__contact";
+    }
+
+    &__box_border {
+        border: none;
+    }
+
+    &__location {
+        grid-area: footer__location;
+        align-items: center;
+        display: flex;
+        margin-bottom: 21px;
+    }
+
+    &__text {
+        @extend %link;
+        position: relative;
+        margin-right: 26px;
+        color: $color_dark_1;
+
+        &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            display: block;
+            position: absolute;
+            background-color: $color_beige_2;
+            border-radius: 50%;
+            top: 7.5px;
+            right: -16px;
+        }
+    }
+
+    &__link {
+        @extend %font_1;
+        color: $color_active_blue;
+        text-decoration: none;
+    }
+
+    &__contact {
+        display: flex;
+        grid-area: footer__contact;
+        align-items: center;
+    }
+
+    &__number {
+        @extend  %font_2;
+        position: relative;
+        color: $color_dark_2;
+        text-decoration: none;
+        margin: 0 26px;
+
+        &::before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            display: block;
+            background-color: $color_beige_2;
+            border-radius: 50%;
+            top: 7.5px;
+            left: -16px;
+        }
+
+        &::after {
+            content: '';
+            width: 6px;
+            height: 6px;
+            position: absolute;
+            display: block;
+            background-color: $color_beige_2;
+            border-radius: 50%;
+            top: 7.5px;
+            right: -16px;
+        }
+    }
+
+    &__facebook:hover .footer__facebook_fill {
+        fill: $color_crimson;
+        transition: 0.3s;
+    }
+
+    &__email {
+        @extend  %font_2;
+        text-decoration: none;
+        color: $color_active_blue;
+
+        &:hover {
+            color: $color_crimson;
+            transition: 0.3s;
+        }
+    }
+
+    &__copy {
+        display: flex;
+        justify-content: flex-end;
+        grid-area: footer__copy;
+        @extend %link;
+        color: $color_beige_2;
+    }
+}

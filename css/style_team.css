@@ -1,0 +1,95 @@
+.team__card__name {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.team__desc {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 46px;
+}
+
+.team__card__post {
+  font-size: 14px;
+  line-height: 22px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.container_header {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container {
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.team {
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.team__desc {
+  background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
+  background-size: cover;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 60px;
+  padding: 0 120px;
+}
+.team__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 60px;
+}
+.team__card {
+  display: flex;
+  flex-direction: column;
+}
+.team__card__pic {
+  width: 493.33px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.team__card__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-decoration: none;
+}
+.team__card__box:hover .team__card__svg_background {
+  fill: #EDEDF7;
+  transition: 0.3s;
+}
+.team__card__box:hover .team__card__svg_arrow {
+  stroke: #F0145A;
+  transition: 0.3s;
+}
+.team__card__box:hover .team__card__name {
+  color: #F0145A;
+  transition: 0.3s;
+}
+.team__card__name {
+  color: #323264;
+}
+.team__card__post {
+  color: #B3B3BA;
+  margin-top: -10px;
+}
+
+/*# sourceMappingURL=style_team.css.map */
