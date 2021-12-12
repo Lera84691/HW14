@@ -65,28 +65,28 @@ body {
     }
 
     &__card__box:hover .team__card__svg_background{
-        fill: $color_beige_4;
+        fill: $color_grey_bg_alt;
         transition: 0.3s;
     }
 
     &__card__box:hover .team__card__svg_arrow{
-        stroke: $color_crimson;
+        stroke: $color_accent;
         transition: 0.3s;
     }
     
     &__card__box:hover .team__card__name{
-        color: $color_crimson;
+        color: $color_accent;
         transition: 0.3s;
     }
 
     &__card__name {
         @extend %font_2;
-        color: $color_dark_1;
+        color:$color_main_regular;
     }
 
     &__card__post {
         @extend %font_4;
-        color: $color_beige_2;
+        color: $color_grey_text;
         margin-top: -10px;
     }
 }

@@ -21,6 +21,8 @@ body {
     margin-left: auto;
 }
 
+/*header white*/
+
 .header {
     padding-top: 50px;
     position: relative;
@@ -28,8 +30,8 @@ body {
     display: grid;
     grid-template-columns: 130px 1fr;
     grid-template-areas:
-    "header__logo header__logo header__nav"
-    "header__logo header__logo header__nav__menu__box";
+        "header__logo header__logo header__nav"
+        "header__logo header__logo header__nav__menu__box";
 
     &__logo {
         grid-area: header__logo;
@@ -46,7 +48,7 @@ body {
         text-decoration: none;
         font-size: 36px;
         line-height: 44px;
-        color: $color_dark_1;
+        color: $color_main;
     }
 
     &__burger {
@@ -76,16 +78,16 @@ body {
 
         &:hover {
             background-color: #FFFFFF33;
-            border-radius: 8px;  
+            border-radius: 8px;
         }
     }
 
     &__nav__link_active {
-        background-color: $color_crimson;
+        background-color: $color_accent;
         border-radius: 8px;
 
         &:hover {
-            background-color: $color_crimson;
+            background-color: $color_accent;
         }
     }
 
@@ -101,7 +103,7 @@ body {
             height: 6px;
             display: block;
             position: absolute;
-            background-color: $color_beige_3;
+            background-color: $color_grey_separator;
             border-radius: 50%;
             top: 7.5px;
             right: -11px;
@@ -113,7 +115,7 @@ body {
             height: 6px;
             display: block;
             position: absolute;
-            background-color: $color_beige_3;
+            background-color: $color_grey_separator;
             border-radius: 50%;
             top: 7.5px;
             left: -13px;
@@ -133,7 +135,7 @@ body {
             height: 6px;
             display: block;
             position: absolute;
-            background-color: $color_beige_3;
+            background-color: $color_grey_separator;
             border-radius: 50%;
             top: 7.5px;
             right: -11px;
@@ -141,7 +143,7 @@ body {
     }
 
     &__nav__facebook:hover .header__nav__facebook_fill {
-        fill: $color_crimson;
+        fill: $color_accent;
         transition: 0.3s;
     }
 
@@ -168,7 +170,7 @@ body {
     }
 
     &__nav__menu__link {
-        @extend  %font_2;
+        @extend %font_2;
         color: $color_white;
         text-decoration: none;
 
@@ -184,19 +186,54 @@ body {
         text-underline-offset: 3px;
     }
 }
+ //header grey//
+.header {
+    &__nav__link_info {
+        color: $color_grey_text;
 
+        &:hover {
+            background-color: $color_grey_bg;
+        }s
+
+        &_active {
+            color: $color_white;
+            
+            &:hover {
+                background-color: $color_accent;
+            }
+        }
+    }
+
+    &__nav__text_info {
+        color: $color_grey_text;
+    }
+
+    &__nav__number_info {
+        color: $color_grey_text;
+    }
+
+    &__nav__menu__link_info {
+        color: $color_active_regular;
+    }
+
+    &__nav__menu__link_active  {
+        color: $color_accent;
+        text-decoration: underline;
+        text-underline-offset: 3px;
+    }
+}
 
 .footer {
-    background-color: $color_beige_1;
+    background-color: $color_grey_bg;
 
     &__box {
-        border-top: 2px solid $color_beige_3;
+        border-top: 2px solid $color_grey_separator;
         padding: 30px 0;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-areas:
-        "footer__location footer__copy"
-        "footer__contact footer__contact";
+            "footer__location footer__copy"
+            "footer__contact footer__contact";
     }
 
     &__box_border {
@@ -222,7 +259,7 @@ body {
             height: 6px;
             display: block;
             position: absolute;
-            background-color: $color_beige_2;
+            background-color: $color_grey_text;
             border-radius: 50%;
             top: 7.5px;
             right: -16px;
@@ -231,7 +268,7 @@ body {
 
     &__link {
         @extend %font_1;
-        color: $color_active_blue;
+        color: $color_active_regular;
         text-decoration: none;
     }
 
@@ -242,9 +279,9 @@ body {
     }
 
     &__number {
-        @extend  %font_2;
+        @extend %font_2;
         position: relative;
-        color: $color_dark_2;
+        color: $color_main_alt;
         text-decoration: none;
         margin: 0 26px;
 
@@ -254,7 +291,7 @@ body {
             height: 6px;
             position: absolute;
             display: block;
-            background-color: $color_beige_2;
+            background-color:$color_grey_text;
             border-radius: 50%;
             top: 7.5px;
             left: -16px;
@@ -266,7 +303,7 @@ body {
             height: 6px;
             position: absolute;
             display: block;
-            background-color: $color_beige_2;
+            background-color: $color_grey_text;
             border-radius: 50%;
             top: 7.5px;
             right: -16px;
@@ -279,12 +316,12 @@ body {
     }
 
     &__email {
-        @extend  %font_2;
+        @extend %font_2;
         text-decoration: none;
-        color: $color_active_blue;
+        color: $color_active_regular;
 
         &:hover {
-            color: $color_crimson;
+            color: $color_accent;
             transition: 0.3s;
         }
     }
@@ -294,7 +331,7 @@ body {
         justify-content: flex-end;
         grid-area: footer__copy;
         @extend %link;
-        color: $color_beige_2;
+        color: $color_grey_text;
     }
 }
 
@@ -321,42 +358,26 @@ body {
         margin-left: 60px;
         grid-template-columns: 1fr;
         grid-template-areas:
-        "header__nav"
-        "header__logo" 
-        "header__nav__menu__box";
+            "header__nav"
+            "header__logo"
+            "header__nav__menu__box";
 
         &__nav {
             justify-content: flex-start;
             margin-bottom: 30px;
         }
-  
+
         &__nav__menu__items {
             justify-content: flex-start;
         }
-        
+
         &__logo {
             margin-bottom: 30px;
         }
-    
+
         &__nav__menu__item {
             margin-left: 0;
             margin-right: 15px;
-        }
-    }
-
-    .footer {
-        &__box {
-            grid-template-areas:
-            "footer__location"
-            "footer__contact"
-            "footer__copy";
-
-            grid-template-columns: 1fr;
-        }
-
-        &__copy {
-            margin-top: 30px;
-            justify-content: center; 
         }
     }
 }
@@ -375,8 +396,8 @@ body {
         padding-top: 0;
         display: grid;
         grid-template-areas:
-        "header__nav header__nav"
-        "header__logo header__burger";
+            "header__nav header__nav"
+            "header__logo header__burger";
 
         &__logo {
             margin-left: 15px;
@@ -391,10 +412,10 @@ body {
             width: 11.62px;
             height: 26px;
         }
-        
+
         &__logo__text {
             font-size: 20px;
-            line-height: 24px; 
+            line-height: 24px;
         }
 
         &__nav {
@@ -406,7 +427,7 @@ body {
         }
 
         &__nav_info {
-            background-color: $color_beige_1;
+            background-color: $color_grey_bg;
         }
 
         &__nav__text {
@@ -453,7 +474,7 @@ body {
             cursor: pointer;
 
             &:hover {
-                background-color: $color_beige_3;
+                background-color: $color_grey_separator;
                 border-radius: 8px;
             }
         }
@@ -463,7 +484,7 @@ body {
         }
 
         &__nav__menu__item {
-            background-color: $color_beige_1;
+            background-color:  $color_grey_bg;
             padding: 7px 0;
             border-radius: 12px;
             margin-bottom: 15px;
@@ -474,7 +495,7 @@ body {
             }
 
             &:active {
-                background-color: $color_active_blue;
+                background-color: $color_grey_separator;
             }
         }
 
@@ -483,17 +504,17 @@ body {
             font-size: 24px;
             font-weight: 700;
             line-height: 29px;
-            color: $color_active_blue;
+            color:$color_active_regular;
 
             &:hover {
                 text-decoration: none;
             }
         }
 
-       &__nav__menu__link_active {
-            color: $color_crimson;
+        &__nav__menu__link_active {
+            color: $color_accent;
             text-decoration: none;
-       }
+        }
 
         &__burger {
             margin-left: auto;
@@ -505,10 +526,10 @@ body {
             width: 32px;
             height: 32px;
             cursor: pointer;
-           
+
 
             &:active {
-                background-color: $color_beige_3;
+                background-color: $color_grey_separator;
                 border-radius: 8px;
             }
         }
@@ -549,7 +570,7 @@ body {
             &::before {
                 display: none;
             }
-        
+
             &::after {
                 display: none;
             }
