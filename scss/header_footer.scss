@@ -48,7 +48,7 @@ body {
         text-decoration: none;
         font-size: 36px;
         line-height: 44px;
-        color: $color_main;
+        color: $color_main_regular;
     }
 
     &__burger {
@@ -182,7 +182,7 @@ body {
 
     &__nav__menu__link_active {
         text-decoration: underline;
-        color: $color_crimson;
+        color: $color_accent;
         text-underline-offset: 3px;
     }
 }
@@ -251,7 +251,7 @@ body {
         @extend %link;
         position: relative;
         margin-right: 26px;
-        color: $color_dark_1;
+        color: $color_main_regular;
 
         &::after {
             content: '';
@@ -311,7 +311,7 @@ body {
     }
 
     &__facebook:hover .footer__facebook_fill {
-        fill: $color_crimson;
+        fill: $color_accent;
         transition: 0.3s;
     }
 
