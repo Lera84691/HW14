@@ -1,4 +1,4 @@
-.publications__button, .clients__title, .team__link, .services__link_title {
+.publications__button, .clients__title, .slider__link, .services__link_title {
   font-size: 14px;
   font-weight: 700;
   line-height: 17px;
@@ -6,13 +6,13 @@
   text-transform: uppercase;
 }
 
-.publications__subtitle, .team__name {
+.publications__subtitle, .slider__name {
   font-size: 16px;
   font-weight: 700;
   line-height: 20px;
 }
 
-.publications__title, .team__title, .services__title, .menu__link, .h__title {
+.publications__title, .slider__title, .services__title, .menu__link, .h__title {
   font-size: 38px;
   font-weight: 700;
   line-height: 46px;
@@ -35,7 +35,7 @@
   line-height: 26px;
 }
 
-.publications__desc, .team__position {
+.publications__desc, .slider__position {
   font-size: 14px;
   line-height: 22px;
 }
@@ -211,44 +211,44 @@ body {
   color: #FFFFFF;
 }
 
-.team__box {
+.slider__box {
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 106px;
 }
-.team__item {
+.slider__item {
   background-color: #F5F5FA;
   border-radius: 12px;
 }
-.team__card {
+.slider__slide {
   display: flex;
 }
-.team__img {
+.slider__img {
   width: 400px;
   height: 298px;
   object-fit: cover;
   border-radius: 12px 0 0 12px;
 }
-.team__text {
+.slider__text {
   display: flex;
   flex-direction: column;
   padding: 30px;
 }
-.team__link {
+.slider__link {
   color: #24A3FF;
   text-decoration: none;
   margin-bottom: 5px;
 }
-.team__link:hover {
+.slider__link:hover {
   color: #F0145A;
   transition: 0.3s;
 }
-.team__link:hover .team__link__svg {
+.slider__link:hover .slider__link__svg {
   stroke: #F0145A;
   transition: 0.3s;
 }
-.team__title {
+.slider__title {
   background-image: linear-gradient(90.13deg, #F0145A 0.84%, #EF8080 99.96%);
   color: transparent;
   background-size: cover;
@@ -256,12 +256,36 @@ body {
   -webkit-background-clip: text;
   margin-bottom: 30px;
 }
-.team__name {
+.slider__name {
   color: #B3B3BA;
   margin-bottom: 6px;
 }
-.team__position {
+.slider__position {
   color: #B3B3BA;
+}
+
+.slick-dots {
+  bottom: -48px;
+}
+
+.slick-dots li {
+  width: 16px;
+  height: 16px;
+  margin: 0 7.5px;
+}
+
+.slick-dots li button:before {
+  font-size: 16px;
+  line-height: 16px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.2;
+  color: #24A3FF;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #24A3FF;
 }
 
 .clients {
@@ -396,12 +420,12 @@ body {
     margin-bottom: 30px;
   }
 
-  .team__box {
+  .slider__box {
     max-width: auto;
     padding: 0 60px;
   }
-  .team__img {
-    height: 300px;
+  .slider__img {
+    height: 344px;
   }
 
   .clients {
@@ -417,7 +441,7 @@ body {
     margin-left: 0;
   }
 
-  .teams__img {
+  .slider__img {
     height: 528px;
   }
 }
@@ -443,12 +467,12 @@ body {
     margin-top: 60px;
   }
 
-  .team__img {
+  .slider__img {
     height: 500px;
     width: 100%;
     border-radius: 12px 12px 0 0;
   }
-  .team__card {
+  .slider__slide {
     flex-direction: column;
   }
 
@@ -470,7 +494,7 @@ body {
     grid-column-start: span 2;
   }
 }
-@media (max-width: 727px) {
+@media (max-width: 767px) {
   body {
     min-width: 375px;
   }
@@ -512,10 +536,10 @@ body {
     margin-top: 30px;
   }
 
-  .team__box {
+  .slider__box {
     padding: 0 30px;
   }
-  .team__title {
+  .slider__title {
     font-size: 30px;
     font-weight: 700;
     line-height: 37px;

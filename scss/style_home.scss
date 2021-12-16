@@ -205,7 +205,7 @@ body {
 }
 
 
-.team {
+.slider {
     &__box {
         max-width: 1600px;
         margin-left: auto;
@@ -218,7 +218,7 @@ body {
         border-radius: 12px;
     }
 
-    &__card {
+    &__slide {
         display: flex;
     }
 
@@ -247,7 +247,7 @@ body {
         }
     }
 
-    &__link:hover .team__link__svg {
+    &__link:hover .slider__link__svg {
         stroke: $color_accent;
         transition: 0.3s;
     }
@@ -273,6 +273,31 @@ body {
         color: $color_grey_text;
     }
 }
+
+.slick-dots {
+    bottom: -48px;
+}
+
+.slick-dots li {
+    width: 16px;
+    height: 16px;
+    margin: 0 7.5px;
+}
+
+.slick-dots li button:before {
+    font-size: 16px;
+    line-height: 16px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.2;
+    color: $color_active_regular;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 1;
+    color: $color_active_regular;
+}
+
 
 
 .clients {
@@ -440,14 +465,14 @@ body {
         margin-bottom: 30px;
     }
 
-    .team {
+    .slider {
         &__box {
             max-width: auto;
             padding: 0 60px;
         }
 
         &__img {
-            height: 300px;
+            height: 344px;
         }
     }
 
@@ -468,7 +493,7 @@ body {
         }
     }
 
-    .teams {
+    .slider {
         &__img {
             height: 528px;
         }
@@ -500,14 +525,14 @@ body {
         }
     }
 
-    .team {
+    .slider {
         &__img {
             height: 500px;
             width: 100%;
             border-radius: 12px 12px 0 0;
         }
 
-        &__card {
+        &__slide {
             flex-direction: column;
         }
     }
@@ -539,7 +564,7 @@ body {
     }
 }
 
-@media (max-width: 727px) {
+@media (max-width: 767px) {
     body {
         min-width: 375px;
     }
@@ -588,7 +613,7 @@ body {
         }
     }
 
-    .team {
+    .slider {
         &__box {
             padding: 0 30px;
         }
