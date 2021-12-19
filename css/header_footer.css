@@ -71,13 +71,13 @@ body {
   display: flex;
 }
 .header__nav__link {
+  color: #FFFFFF;
   text-decoration: none;
   font-size: 12px;
   padding: 5px 7px;
   font-weight: 700;
   line-height: 15px;
   letter-spacing: 1px;
-  color: #FFFFFF;
 }
 .header__nav__link:hover {
   background-color: #FFFFFF33;
@@ -172,13 +172,10 @@ body {
 .header__nav__link_info {
   color: #B3B3BA;
 }
-.header__nav__link_info:hover {
-  background-color: #F5F5FA;
-}
-s .header__nav__link_info_active {
+.header__nav__link_info_active {
   color: #FFFFFF;
 }
-s .header__nav__link_info_active:hover {
+.header__nav__link_info_active:hover {
   background-color: #F0145A;
 }
 .header__nav__text_info {

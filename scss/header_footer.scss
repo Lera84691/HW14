@@ -64,13 +64,14 @@ body {
     }
 
     &__nav__link {
+        color: $color_white;
         text-decoration: none;
         font-size: 12px;
         padding: 5px 7px;
         font-weight: 700;
         line-height: 15px;
         letter-spacing: 1px;
-        color: $color_white;
+        
 
         &:hover {
             background-color: #FFFFFF33;
@@ -186,11 +187,6 @@ body {
 .header {
     &__nav__link_info {
         color: $color_grey_text;
-
-        &:hover {
-            background-color: $color_grey_bg;
-        }
-
         &_active {
             color: $color_white;
             
